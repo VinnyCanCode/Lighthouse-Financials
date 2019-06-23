@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: white; }
+
+.landing_background {
+  width: 100%;
+  height: 100vh;
+  background: #FDBD59;
+  color: white;
+  overflow: hidden;
+  text-shadow: 1px 1px #616163; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem; }
+  header .logo {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 10rem;
+    background: #616163;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    left: 20rem; }
+    header .logo img {
+      width: 11rem;
+      height: 11rem;
+      position: relative;
+      top: .4rem;
+      left: .5rem; }
+  header .header_container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 50rem;
+    margin: 1rem; }
+    header .header_container .nav_bar {
+      display: flex;
+      flex-direction: row;
+      list-style: none; }
+      header .header_container .nav_bar li {
+        margin: 1rem;
+        font-size: 1.5rem; }
+        header .header_container .nav_bar li a {
+          text-decoration: none;
+          color: white; }
+
+.landing_title {
+  margin: 2rem;
+  position: relative;
+  left: 15rem;
+  top: 10rem; }
+  .landing_title .page_title {
+    font-size: 3rem; }
+  .landing_title h5 {
+    font-size: 2rem; }
+
+.side_draw {
+  position: relative;
+  background: #DD1C1A;
+  width: 70vw;
+  height: 100vh;
+  left: 75rem;
+  border: white 15px solid;
+  bottom: 35rem;
+  transform: rotate(-20deg); }
+  .side_draw .side_container img {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    right: 10rem;
+    z-index: 1;
+    margin: 2.5rem; }
+  .side_draw .side_container .fall_love {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    bottom: 10rem; }
+  .side_draw .side_container .wedding {
+    position: relative;
+    top: 15rem;
+    width: 15rem;
+    height: 15rem; }
+  .side_draw .side_container .grandma {
+    position: relative;
+    top: 10rem;
+    right: 5rem; }
+  .side_draw .side_container .family_3 {
+    position: relative;
+    right: 10rem; }
+  .side_draw .side_container .scrumboard {
+    position: relative;
+    right: 25rem; }
+
+.your_path {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+  .your_path .path_title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 2rem 0 0 0; }
+  .your_path .yourpath_container {
+    width: 99vw;
+    height: 70vh; }
+    .your_path .yourpath_container .path_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 3rem 3rem 3rem;
+      text-align: center;
+      font-size: 1.5rem; }
+      .your_path .yourpath_container .path_container h1 {
+        font-size: 2rem; }
+      .your_path .yourpath_container .path_container img {
+        width: 20rem;
+        height: 20rem; }
+      .your_path .yourpath_container .path_container .your_life {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .your_team {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .your_goal {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .growing_up {
+        height: 15rem;
+        width: 15rem; }
+
+.our_commitment {
+  width: 100vw;
+  height: 100vh;
+  background: #DD1C1A;
+  color: white;
+  clip-path: polygon(0 27%, 100% 0%, 100% 72%, 0% 100%); }
+  .our_commitment .our_services_pics {
+    width: 60vw;
+    height: 100vh;
+    background: #FDBD59;
+    border: white 15px solid;
+    position: relative;
+    transform: rotate(10deg);
+    top: 10rem;
+    right: 10rem; }
+    .our_commitment .our_services_pics img {
+      width: 20rem;
+      height: 20rem; }
+    .our_commitment .our_services_pics .team_meeting_2 {
+      top: 15rem;
+      left: 60rem;
+      position: relative; }
+    .our_commitment .our_services_pics .analyze_two {
+      top: 15rem;
+      left: 20rem;
+      position: relative; }
+    .our_commitment .our_services_pics .analyze_one {
+      bottom: 10rem;
+      position: relative; }
+    .our_commitment .our_services_pics .analyze_three {
+      top: 5rem;
+      position: relative; }
+  .our_commitment .our_commitment_container {
+    width: 100vw;
+    height: 100vh; }
+    .our_commitment .our_commitment_container .commitment_words {
+      margin: 3rem;
+      width: 20rem;
+      height: 100%;
+      line-height: 2.5rem;
+      position: relative;
+      left: 75rem;
+      bottom: 50rem;
+      z-index: 3;
+      font-size: 1.2rem; }
+      .our_commitment .our_commitment_container .commitment_words h1 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem; }
+
+.our_services {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center center; }
+  .our_services h1 {
+    font-size: 2rem; }
+  .our_services .service_container {
+    width: 70vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    line-height: 2rem;
+    z-index: 1; }
+    .our_services .service_container .service_grid {
+      padding: 4rem; }
+    .our_services .service_container .service_one, .our_services .service_container .service_two, .our_services .service_container .service_three {
+      border-bottom: 3px solid #E1E1E1; }
+    .our_services .service_container .service_one, .our_services .service_container .service_four {
+      border-right: 3px solid #E1E1E1; }
+    .our_services .service_container .service_two, .our_services .service_container .service_five {
+      border-right: 3px solid #E1E1E1; }
+    .our_services .service_container div:nth-of-type(n):hover {
+      background: #FDBD59;
+      color: white;
+      font-size: 1.3rem; }
+
+.the_team {
+  width: 100vw;
+  height: 95vh;
+  overflow: hidden; }
+  .the_team h1, .the_team p {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 2rem; }
+  .the_team .team_container {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); }
+    .the_team .team_container .card {
+      width: 17vw;
+      height: 45vh;
+      margin: 1rem .3rem 1rem .3rem;
+      overflow: hidden;
+      text-align: center;
+      line-height: 2rem;
+      box-shadow: 1px 1px 20px #ACACAC;
+      background: white; }
+      .the_team .team_container .card h3 {
+        font-size: 1.5rem; }
+      .the_team .team_container .card p {
+        font-size: 1rem; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          position: relative;
+          bottom: 7rem;
+          right: 1rem;
+          zoom: 80%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          position: relative;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          position: relative;
+          zoom: 50%;
+          bottom: 2rem;
+          right: .5rem; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          position: relative;
+          right: 10rem;
+          zoom: 50%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          position: relative;
+          zoom: 70%;
+          right: .5rem;
+          bottom: 3rem; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          position: relative;
+          zoom: 66%;
+          bottom: 5rem; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          position: relative;
+          right: 5rem;
+          bottom: 7rem;
+          zoom: 80%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 1.5rem;
+          bottom: 4rem;
+          zoom: 70%; }
+
+footer {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden; }
+  footer .left_triangle {
+    content: "";
+    clip-path: polygon(0 0, 0% 100%, 58% 0);
+    background: #FDBD59;
+    height: 25vh; }
+  footer .right_triangle {
+    content: "";
+    clip-path: polygon(100% 100%, 43% 100%, 100% 36%);
+    background: #DD1C1A;
+    height: 15vh; }
+  footer .subscription {
+    font-size: 2rem;
+    width: 100vw;
+    height: 35vh;
+    text-align: center; }
+    footer .subscription input[type=email] {
+      margin-left: 2rem;
+      width: 30%;
+      padding: 1rem 2rem;
+      border: white;
+      box-shadow: 5px 5px 30px #ACACAC; }
+    footer .subscription input[type=submit] {
+      background-color: #FDBD59;
+      color: white;
+      padding: 1.09rem 2.1rem;
+      text-decoration: none;
+      cursor: pointer; }
+  footer .contact_container {
+    width: 100vw;
+    height: 10%;
+    margin-top: 2rem;
+    border-top: 1px solid #DCDCDC; }
+    footer .contact_container .contact {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      position: relative;
+      left: 35%; }
+      footer .contact_container .contact li {
+        margin-right: 3.5rem;
+        margin-top: 2rem; }
+        footer .contact_container .contact li a {
+          text-decoration: none;
+          color: black; }
+      footer .contact_container .contact .social_media {
+        height: 1.2rem;
+        width: 1.2rem; }
