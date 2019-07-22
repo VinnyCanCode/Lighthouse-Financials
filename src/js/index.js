@@ -1,5 +1,5 @@
 // Smooth Scrolling
-$('.nav_bar a, .btn').on('click', function(event) {
+$('.nav_bar a, .btn, #footer a').on('click', function(event) {
   if (this.hash !== '') {
     event.preventDefault();
 
@@ -13,3 +13,13 @@ $('.nav_bar a, .btn').on('click', function(event) {
     );
   }
 });
+
+// Subscribe Email Input
+
+const subscribe = document.querySelector('.emailSubmission');
+
+subscribe.addEventListener('click', e => {
+    if ('click'){
+        subscribe.value = '';
+    };
+})
