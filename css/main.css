@@ -1,594 +1,1068 @@
-$backgroundOne: #FDBD59;
-$backgroundTwo: #DD1C1A;
-$backgroundThree: #FFF1D0;
-$backgroundFour: #FDBD59; // main yellow
-$backgroundFive: #3772FF; // main blue
-$border: black solid 1px;
-$animationSpeed: 40s;
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-};
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
-    background: white;
-    font-family: 'Noto Sans','Source Sans', sans-serif;
-}
+  background: white;
+  font-family: 'Noto Sans','Source Sans', sans-serif; }
 
 .landing_background {
-    width: 100%;
-    height: 100vh;
-    background: $backgroundFive;
-    color: white;
-    overflow: hidden;
-    text-shadow: 1px 1px #616163;
-}
-
+  width: 100%;
+  height: 100vh;
+  background: #3772FF;
+  color: white;
+  overflow: hidden;
+  text-shadow: 1px 1px #616163; }
 
 header {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem; }
+  header .logo .lighthouse_logo {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 10rem;
+    background: #616163;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    left: 15rem; }
+    header .logo .lighthouse_logo img {
+      width: 11rem;
+      height: 11rem;
+      position: relative;
+      top: .4rem;
+      left: .5rem; }
+  header .logo p {
+    position: relative;
+    left: 28rem;
+    bottom: 9.5rem;
+    font-size: 2rem; }
+  header .header_container {
     display: flex;
     flex-direction: row;
-    margin: 2rem;
-
-
-    .logo {
-
-        .lighthouse_logo {
-            margin-top: 1rem;
-            width: 10rem;
-            height: 10rem;
-            background: #616163; //100b00
-            clip-path: circle(50% at 50% 50%);
-            position: relative;
-            left: 15rem;
-
-
-            img {
-                width: 11rem;
-                height: 11rem;
-                position: relative;
-                top: .4rem;
-                left: .5rem;
-            }
-        }
-
-        p {
-                position: relative;
-                left: 28rem;
-                bottom: 9.5rem;
-                font-size: 2rem;
-            }
-    }
-
-
-    .header_container {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        left: 50rem;
+    position: relative;
+    left: 50rem;
+    margin: 1rem; }
+    header .header_container .nav_bar {
+      display: flex;
+      flex-direction: row;
+      list-style: none; }
+      header .header_container .nav_bar li {
         margin: 1rem;
-
-
-        .nav_bar{
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-
-            li {
-                margin: 1rem;
-                font-size: 1.5rem;
-
-                a{
-                    text-decoration: none;
-                    color: white;
-                }
-
-                a:hover {
-                    color: $backgroundFour;
-                }
-            }
-        }
-    }
-}
+        font-size: 1.5rem; }
+        header .header_container .nav_bar li a {
+          text-decoration: none;
+          color: white; }
+        header .header_container .nav_bar li a:hover {
+          color: #FDBD59; }
 
 .landing_title {
-    margin: 2rem;
+  margin: 2rem;
+  position: relative;
+  left: 15rem;
+  top: 5rem; }
+  .landing_title .page_title {
+    font-size: 3rem; }
+  .landing_title h5 {
+    font-size: 2rem; }
+
+.side_draw {
+  position: relative;
+  background: #FDBD59;
+  width: 70%;
+  height: 100%;
+  left: 70rem;
+  border: white 15px solid;
+  bottom: 37rem;
+  transform: rotate(-25deg); }
+  .side_draw .side_container img {
+    width: 18%;
+    height: 18%;
     position: relative;
-    left: 15rem;
-    top: 5rem;
-
-    .page_title{
-        font-size: 3rem;
-    }
-
-    h5 {
-        font-size: 2rem;
-    }
-
-}
-
-.side_draw{
-    position: relative;
-    background: $backgroundFour;
-    width: 70%;
-    height: 100%;
-    left: 70rem;
-    border: white 15px solid;
-    bottom: 37rem;
-    transform: rotate(-25deg);
-
-
-    .side_container{
-
-
-        img {
-            width: 18%;
-            height: 18%;
-            position: relative;
-            right: 10rem;
-            z-index: 1;
-            margin: 2.5rem;
-            };
-
-            .fall_love{
-                width: 18%;
-                height: 18%;
-                right: 1rem;
-                bottom: 4rem;
-                transform: rotate(20deg);
-
-            }
-
-            .graduation {
-                transform: rotate(30deg);
-                right: 0%;
-                top: 4rem;
-            }
-
-            .wedding {
-                top: 22rem;
-                right: 12%;
-                transform: rotate(25deg);
-            }
-
-            .grandma {
-                top: 8rem;
-                right: 8rem;
-                transform: rotate(25deg);
-            }
-
-            .family_3{
-                right: 0rem;
-                bottom: 8rem;
-                transform: rotate(25deg);
-            }
-
-            .scrumboard {
-                right: 25rem;
-                transform: rotate(25deg);
-            }
-    }
-}
+    right: 10rem;
+    z-index: 1;
+    margin: 2.5rem; }
+  .side_draw .side_container .fall_love {
+    width: 18%;
+    height: 18%;
+    right: 1rem;
+    bottom: 4rem;
+    transform: rotate(20deg); }
+  .side_draw .side_container .graduation {
+    transform: rotate(30deg);
+    right: 0%;
+    top: 4rem; }
+  .side_draw .side_container .wedding {
+    top: 22rem;
+    right: 12%;
+    transform: rotate(25deg); }
+  .side_draw .side_container .grandma {
+    top: 8rem;
+    right: 8rem;
+    transform: rotate(25deg); }
+  .side_draw .side_container .family_3 {
+    right: 0rem;
+    bottom: 8rem;
+    transform: rotate(25deg); }
+  .side_draw .side_container .scrumboard {
+    right: 25rem;
+    transform: rotate(25deg); }
 
 .your_path {
-    width: 100vw;
-    height: 108vh;
-    overflow: hidden;
-
-    .path_title{
-        text-align: center;
-        font-size: 2.3rem;
-        margin: 2rem 0 0 0;
-    }
-
-
-    .yourpath_container {
-        width: 99vw;
-        height: 70vh;
-
-
-        .path_container{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0 3rem 3rem 3rem;
-            text-align: center;
-            font-size: 1.5rem;
-
-            h1 {font-size: 2rem}
-
-            img {
-                    width: 20rem;
-                    height: 20rem;
-                }
-
-
-            .your_life{
-                width: 90%;
-
-            }
-
-            .your_team{
-                width: 90%;
-
-            }
-
-            .your_goal{
-                width: 90%;
-            }
-
-            .growing_up { height: 15rem; width: 15rem; }
-        }
-    }
-
-}
+  width: 100vw;
+  height: 108vh;
+  overflow: hidden; }
+  .your_path .path_title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 2rem 0 0 0; }
+  .your_path .yourpath_container {
+    width: 99vw;
+    height: 70vh; }
+    .your_path .yourpath_container .path_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 3rem 3rem 3rem;
+      text-align: center;
+      font-size: 1.5rem; }
+      .your_path .yourpath_container .path_container h1 {
+        font-size: 2rem; }
+      .your_path .yourpath_container .path_container img {
+        width: 20rem;
+        height: 20rem; }
+      .your_path .yourpath_container .path_container .your_life {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .your_team {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .your_goal {
+        width: 90%; }
+      .your_path .yourpath_container .path_container .growing_up {
+        height: 15rem;
+        width: 15rem; }
 
 .our_commitment {
-    width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #3772FF;
+  color: white;
+  clip-path: polygon(0 27%, 100% 0%, 100% 72%, 0% 100%); }
+  .our_commitment .our_services_pics {
+    width: 60vw;
     height: 100vh;
-    background: $backgroundFive;
-    color: white;
-    clip-path: polygon(0 27%, 100% 0%, 100% 72%, 0% 100%);
-
-    .our_services_pics{
-        width: 60vw;
-        height: 100vh;
-        background: $backgroundFour;
-        border: white 15px solid;
-        position: relative;
-        transform: rotate(10deg);
-        top: 10rem;
-        right: 10rem;
-
-        img {
-            width: 20rem;
-            height: 20rem;
-        }
-
-        .team_meeting_2 {
-                top: 15rem;
-                left: 60rem;
-                position: relative;
-                transform: rotate(-10deg);
-            }
-
-        .analyze_two {
-            top: 15rem;
-            left: 20rem;
-            position: relative;
-            transform: rotate(-10deg);
-        }
-
-        .analyze_one {
-            bottom: 10rem;
-            position: relative;
-            transform: rotate(-10deg);
-        }
-
-        .analyze_three {
-            top: 9rem;
-            right: 3rem;
-            position: relative;
-            transform: rotate(-10deg);
-        }
-
-    }
-
-
-
-    .our_commitment_container{
-        width: 100vw;
-        height: 100vh;
-
-
-        .commitment_words {
-            margin: 3rem;
-            width: 20rem;
-            height: 100%;
-            line-height: 2.5rem;
-            position: relative;
-            left: 75rem;
-            bottom: 50rem;
-            z-index: 3;
-            font-size: 1.2rem;
-
-            h1 {
-                font-size: 4rem;
-                line-height: 3.5rem;
-                margin-bottom: 1.5rem;
-            }
-        }
-
-    }
-}
-
+    background: #FDBD59;
+    border: white 15px solid;
+    position: relative;
+    transform: rotate(10deg);
+    top: 10rem;
+    right: 10rem; }
+    .our_commitment .our_services_pics img {
+      width: 20rem;
+      height: 20rem; }
+    .our_commitment .our_services_pics .team_meeting_2 {
+      top: 15rem;
+      left: 60rem;
+      position: relative;
+      transform: rotate(-10deg); }
+    .our_commitment .our_services_pics .analyze_two {
+      top: 15rem;
+      left: 20rem;
+      position: relative;
+      transform: rotate(-10deg); }
+    .our_commitment .our_services_pics .analyze_one {
+      bottom: 10rem;
+      position: relative;
+      transform: rotate(-10deg); }
+    .our_commitment .our_services_pics .analyze_three {
+      top: 9rem;
+      right: 3rem;
+      position: relative;
+      transform: rotate(-10deg); }
+  .our_commitment .our_commitment_container {
+    width: 100vw;
+    height: 100vh; }
+    .our_commitment .our_commitment_container .commitment_words {
+      margin: 3rem;
+      width: 20rem;
+      height: 100%;
+      line-height: 2.5rem;
+      position: relative;
+      left: 75rem;
+      bottom: 50rem;
+      z-index: 3;
+      font-size: 1.2rem; }
+      .our_commitment .our_commitment_container .commitment_words h1 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem; }
 
 .our_services {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center center; }
+  .our_services h1 {
+    font-size: 2rem; }
+  .our_services .service_container {
+    width: 70vw;
+    height: 80vh;
     display: grid;
-    place-items: center center;
-
-    h1{font-size: 2rem}
-
-
-    .service_container {
-        width: 70vw;
-        height: 80vh;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-        line-height: 2rem;
-        z-index: 1;
-
-            .service_grid {
-                padding: 4rem;
-            }
-
-            .service_one, .service_two, .service_three {
-                    border-bottom: 3px solid #E1E1E1;
-                }
-
-            .service_one, .service_four {
-                border-right: 3px solid #E1E1E1;
-            }
-
-            .service_two, .service_five {
-                border-right: 3px solid #E1E1E1;
-            }
-
-            div:nth-of-type(n):hover {
-                background: $backgroundFive;
-                color: white;
-            }
-    }
-}
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    line-height: 2rem;
+    z-index: 1; }
+    .our_services .service_container .service_grid {
+      padding: 4rem; }
+    .our_services .service_container .service_one, .our_services .service_container .service_two, .our_services .service_container .service_three {
+      border-bottom: 3px solid #E1E1E1; }
+    .our_services .service_container .service_one, .our_services .service_container .service_four {
+      border-right: 3px solid #E1E1E1; }
+    .our_services .service_container .service_two, .our_services .service_container .service_five {
+      border-right: 3px solid #E1E1E1; }
+    .our_services .service_container div:nth-of-type(n):hover {
+      background: #3772FF;
+      color: white; }
 
 .the_team {
-    width: 100vw;
-    height: 90vh;
-    overflow: hidden;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden; }
+  .the_team h1, .the_team p {
+    text-align: center;
+    line-height: 2rem; }
+  .the_team h1 {
+    margin-top: 5rem;
+    font-size: 3.5rem; }
+  .the_team p {
+    margin-top: 3rem;
+    font-size: 1.1rem; }
+  .the_team div:nth-of-type(n):hover {
+    animation-play-state: paused; }
+  .the_team .slideTrack {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14); }
 
-    h1, p {
+@keyframes scroll {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(calc(-216.5px * 14)); } }
+  .the_team .team_container {
+    margin: 1rem;
+    position: relative;
+    top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr); }
+    .the_team .team_container div:nth-of-type(n):hover {
+      font-size: 1.3rem;
+      box-shadow: 1px 1px 20px #ACACAC; }
+    .the_team .team_container .card {
+      width: 17vw;
+      height: 45vh;
+      margin: -5rem 3rem 1rem .3rem;
+      overflow: hidden;
+      text-align: center;
+      line-height: 2rem;
+      background: white; }
+      .the_team .team_container .card .cardContact {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 3rem; }
+        .the_team .team_container .card .cardContact div:nth-of-type(n):hover {
+          box-shadow: 0px 0px 0px #ACACAC; }
+        .the_team .team_container .card .cardContact h3 {
+          font-size: 1rem;
+          padding: .5rem;
+          width: 75%;
+          background: #FDBD59;
+          color: white; }
+        .the_team .team_container .card .cardContact .cardSocialContainer {
+          width: 16rem; }
+          .the_team .team_container .card .cardContact .cardSocialContainer .socialList {
+            list-style: none;
+            display: flex;
+            flex-direction: row; }
+            .the_team .team_container .card .cardContact .cardSocialContainer .socialList .socialMedia {
+              margin: .8rem 1rem 1rem 0rem;
+              padding-left: 1.5rem;
+              width: 2.5rem;
+              height: 2.5rem; }
+      .the_team .team_container .card h3, .the_team .team_container .card p {
         text-align: center;
         line-height: 2rem;
-    }
-
-    h1 {margin-top: 5rem; font-size: 3.5rem;}
-    p {margin-top: 3rem; font-size: 1.1rem}
-
-    div:nth-of-type(n):hover {
-            animation-play-state: paused;
-        }
-
-    .slideTrack {
-        animation: scroll $animationSpeed linear infinite;
-        display: flex;
-        width: calc(250px * 14);
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-216.5px * 14))}
-        }
-    }
-
-    .team_container {
-        margin: 1rem;
-        position: relative;
-        top: 10rem;
-        display: grid;
-        grid-template-columns: repeat(16, 1fr);
-
-        div:nth-of-type(n):hover {
-                font-size: 1.3rem;
-                box-shadow: 1px 1px 20px #ACACAC;
-            }
-
-
-        .card {
-            width: 17vw;
-            height: 45vh;
-            margin: -5rem 3rem 1rem .3rem;
-            overflow: hidden;
-            text-align: center;
-            line-height: 2rem;
-            background: white;
-
-
-            .cardContact{
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                height: 3rem;
-
-            div:nth-of-type(n):hover {
-                box-shadow: 0px 0px 0px #ACACAC;
-            }
-
-                h3 {
-                    font-size: 1rem;
-                    padding: .5rem;
-                    width: 75%;
-                    background: $backgroundFour;
-                    color: white;
-                }
-
-            .cardSocialContainer {
-                width: 16rem;
-
-                .socialList {
-                    list-style: none;
-                    display: flex;
-                    flex-direction: row;
-
-                    .socialMedia {
-                        margin: .8rem 1rem 1rem 0rem;
-                        padding-left: 1.5rem;
-                        width: 2.5rem;
-                        height: 2.5rem;
-                    }
-                }
-            }
-        }
-
-
-            h3, p {
-                text-align: center;
-                line-height: 2rem;
-                margin-top: 0rem;
-            }
-
-            h3 {font-size: 1.5rem}
-            p {font-size: 1rem}
-
-            .card_img {
-                height: 30vh;
-                overflow: hidden;
-                margin-bottom: 2rem;
-
-
-                .business_card_1 {
-                    position: relative;
-                    bottom: 7rem;
-                    right: 1rem;
-                    zoom: 80%;
-                }
-
-                .business_card_2 {
-                    position: relative;
-                    zoom: 65%;
-                }
-
-                .business_card_3 {
-                    position: relative;
-                    zoom: 50%;
-                    bottom: 2rem;
-                    right: .5rem;
-                }
-
-                .business_card_4 {
-                    position: relative;
-                    right: 10rem;
-                    zoom: 50%;
-                }
-
-                .business_card_5 {
-                    position: relative;
-                    zoom: 70%;
-                    right: .5rem;
-                    bottom: 3rem;
-                }
-
-
-                 .business_card_6 {
-                    position: relative;
-                    zoom: 66%;
-                    bottom: 5rem;
-                    opacity: 1;
-                }
-
-                .business_card_7 {
-                    position: relative;
-                    right: 5rem;
-                    bottom: 7rem;
-                    zoom: 80%;
-                }
-
-                .business_card_8 {
-                    position: relative;
-                    right: 1.5rem;
-                    bottom: 4rem;
-                    zoom: 70%;
-                }
-            }
-        }
-
-    }
-
-}
+        margin-top: 0rem; }
+      .the_team .team_container .card h3 {
+        font-size: 1.5rem; }
+      .the_team .team_container .card p {
+        font-size: 1rem; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          position: relative;
+          bottom: 7rem;
+          right: 1rem;
+          zoom: 80%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          position: relative;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          position: relative;
+          zoom: 50%;
+          bottom: 2rem;
+          right: .5rem; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          position: relative;
+          right: 10rem;
+          zoom: 50%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          position: relative;
+          zoom: 70%;
+          right: .5rem;
+          bottom: 3rem; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          position: relative;
+          zoom: 66%;
+          bottom: 5rem;
+          opacity: 1; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          position: relative;
+          right: 5rem;
+          bottom: 7rem;
+          zoom: 80%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 1.5rem;
+          bottom: 4rem;
+          zoom: 70%; }
 
 footer {
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden; }
+  footer .left_triangle {
+    content: "";
+    clip-path: polygon(0 0, 0% 100%, 58% 0);
+    background: #3772FF;
+    height: 25vh; }
+  footer .right_triangle {
+    content: "";
+    clip-path: polygon(100% 100%, 43% 100%, 100% 36%);
+    background: #FDBD59;
+    height: 15vh; }
+  footer .subscription {
+    font-size: 2rem;
     width: 100vw;
+    height: 15vh;
+    margin-top: 4rem;
+    text-align: center; }
+    footer .subscription input[type=email] {
+      margin-left: 2rem;
+      width: 30%;
+      padding: 1rem 2rem;
+      border: white;
+      box-shadow: -10px 5px 30px #ACACAC;
+      outline: none; }
+    footer .subscription .emailSubmission {
+      font-size: 1rem; }
+    footer .subscription input[type=submit] {
+      background-color: #3772FF;
+      color: white;
+      font-size: 1rem;
+      padding: .89rem 2rem;
+      text-decoration: none;
+      cursor: pointer;
+      outline: none; }
+    footer .subscription .emailShort {
+      display: none; }
+  footer .contact_container {
+    width: 100vw;
+    height: 10%;
+    border-top: 1px solid #DCDCDC; }
+    footer .contact_container .contact {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      position: relative;
+      left: 35%; }
+      footer .contact_container .contact li {
+        margin-right: 3.5rem;
+        margin-top: 2rem; }
+        footer .contact_container .contact li a {
+          text-decoration: none;
+          color: black; }
+      footer .contact_container .contact .social_media {
+        height: 1.2rem;
+        width: 1.2rem; }
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    overflow-x: hidden; }
+  .landing_background {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  header .logo .lighthouse_logo {
+    width: 8rem;
+    height: 8rem;
+    left: 5rem; }
+  header .logo p {
+    position: relative;
+    left: 15rem;
+    bottom: 8rem;
+    font-size: 2rem; }
+  header .header_container {
+    margin-top: 5%;
+    left: 3%; }
+  .landing_title {
+    left: 5rem;
+    top: 1rem; }
+  .side_draw {
+    left: 50rem;
+    bottom: 32rem;
+    width: 60%;
+    height: 90vh; }
+    .side_draw .side_container img {
+      width: 22%;
+      height: 12rem; }
+    .side_draw .side_container .graduation {
+      top: -1%;
+      right: 5%; }
+    .side_draw .side_container .wedding {
+      top: 10rem;
+      right: 10rem; }
+    .side_draw .side_container .grandma {
+      top: -13rem;
+      right: 3rem; }
+    .side_draw .side_container .family_3 {
+      top: -25rem; }
+    .side_draw .side_container .scrumboard {
+      bottom: 38vh;
+      left: 55%; }
+  .your_path {
+    height: 108vh; }
+    .your_path .yourpath_container {
+      margin-bottom: -1rem;
+      font-size: 1rem; }
+      .your_path .yourpath_container .path_container {
+        font-size: 1.3rem; }
+        .your_path .yourpath_container .path_container img {
+          width: 13rem;
+          height: 13rem; }
+        .your_path .yourpath_container .path_container .growing_up {
+          height: 10rem;
+          width: 10rem; }
+  .our_commitment .our_services_pics img {
+    width: 18rem;
+    height: 18rem; }
+  .our_commitment .our_services_pics .team_meeting_2 {
+    top: 10rem;
+    left: 43rem; }
+  .our_commitment .our_services_pics .analyze_two {
+    top: 7rem;
+    left: -3rem; }
+  .our_commitment .our_services_pics .analyze_one {
+    bottom: 30rem;
+    left: 25rem; }
+  .our_commitment .our_services_pics .analyze_three {
+    top: 6rem;
+    right: 7rem; }
+  .our_commitment .our_commitment_container .commitment_words {
+    left: 55rem;
+    bottom: 41rem;
+    font-size: 1rem; }
+  .our_services {
+    margin-bottom: 25rem;
+    height: 80vh; }
+  .the_team {
+    width: 100vw;
+    height: 95vh; }
+    .the_team .team_container .card {
+      width: 20vw;
+      height: 48vh; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          zoom: 70%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          zoom: 55%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          right: -1rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          right: 7rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          zoom: 60%; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          zoom: 55%;
+          bottom: 4rem;
+          opacity: 1; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          right: 4rem;
+          bottom: 6rem;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 1.5rem;
+          bottom: 3rem;
+          zoom: 55%; }
+  footer {
     height: 70vh;
-    overflow: hidden;
+    overflow: hidden; }
+    footer .subscription {
+      height: 12vh; } }
 
-    .left_triangle {
-        content: "";
-        clip-path: polygon(0 0, 0% 100%, 58% 0);
-        background: $backgroundFive;
-        height: 25vh;
-    }
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    overflow-x: hidden; }
+  .landing_background {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  header .logo .lighthouse_logo {
+    width: 8rem;
+    height: 8rem;
+    left: 5rem; }
+  header .logo p {
+    position: relative;
+    left: 13rem;
+    bottom: 3rem;
+    font-size: 2rem; }
+  header .header_container {
+    left: 10rem; }
+    header .header_container .nav_bar li {
+      font-size: 1.3rem; }
+  .landing_title {
+    left: 5rem;
+    top: 1rem; }
+    .landing_title .page_title {
+      font-size: 2.5rem; }
+    .landing_title h5 {
+      font-size: 1.5rem; }
+  .side_draw {
+    left: 45rem;
+    bottom: 32rem;
+    width: 60vw;
+    height: 90vh;
+    transform: rotate(-30deg); }
+    .side_draw .side_container img {
+      width: 10rem;
+      height: 10rem; }
+    .side_draw .side_container .fall_love {
+      width: 10rem;
+      height: 10rem; }
+    .side_draw .side_container .graduation {
+      top: 7rem;
+      right: 5rem; }
+    .side_draw .side_container .wedding {
+      top: -10rem;
+      width: 10rem;
+      height: 10rem;
+      left: -2rem; }
+    .side_draw .side_container .grandma {
+      top: -8rem;
+      right: 16rem; }
+    .side_draw .side_container .family_3 {
+      top: -17rem; }
+    .side_draw .side_container .scrumboard {
+      bottom: 18rem;
+      left: 0rem; }
+  .your_path {
+    height: 108vh; }
+    .your_path .yourpath_container {
+      margin-bottom: -1rem;
+      font-size: 1rem; }
+      .your_path .yourpath_container .path_container {
+        font-size: 1.3rem; }
+        .your_path .yourpath_container .path_container img {
+          width: 13rem;
+          height: 13rem; }
+        .your_path .yourpath_container .path_container .growing_up, .your_path .yourpath_container .path_container .presentation_pic, .your_path .yourpath_container .path_container .team_idea {
+          visibility: hidden; }
+  .our_commitment .our_services_pics img {
+    width: 15rem;
+    height: 15rem; }
+  .our_commitment .our_services_pics .team_meeting_2 {
+    top: 13rem;
+    left: 28rem; }
+  .our_commitment .our_services_pics .analyze_two {
+    top: 12rem;
+    left: -4rem; }
+  .our_commitment .our_services_pics .analyze_one {
+    bottom: 25rem;
+    left: 20rem; }
+  .our_commitment .our_services_pics .analyze_three {
+    top: 6rem;
+    right: 7rem; }
+  .our_commitment .our_commitment_container .commitment_words {
+    left: 32rem;
+    bottom: 41rem;
+    font-size: 1rem; }
+  .our_services {
+    margin-bottom: 45rem;
+    height: 80vh; }
+    .our_services h1 {
+      margin-bottom: 1rem; }
+  .service_container {
+    width: 100vw;
+    height: 50vh; }
+    .service_container .servie_grid {
+      padding: 2rem; }
+  .the_team {
+    width: 100vw;
+    height: 95vh; }
+    .the_team .team_container .card {
+      width: 25vw;
+      height: 48vh; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          right: 1rem;
+          zoom: 70%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          right: 1rem;
+          zoom: 55%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          right: 1rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          right: 9rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          right: 2rem;
+          zoom: 60%; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          zoom: 55%;
+          right: 1rem;
+          bottom: 4rem;
+          opacity: 1; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          right: 5rem;
+          bottom: 6rem;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 2.5rem;
+          bottom: 3rem;
+          zoom: 55%; }
+  footer {
+    height: 70vh;
+    overflow: hidden; }
+    footer .subscription {
+      height: 12vh; } }
 
-    .right_triangle {
-        content: "";
-        clip-path: polygon(100% 100%, 43% 100%, 100% 36%);
-        background: $backgroundFour;
-        height: 15vh;
-    }
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  * {
+    box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+  .landing_background {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  header .logo .lighthouse_logo {
+    width: 8rem;
+    height: 8rem;
+    left: 5rem; }
+  header .logo p {
+    position: relative;
+    left: 13rem;
+    bottom: 3rem;
+    font-size: 2rem; }
+  header .header_container {
+    left: 3rem; }
+    header .header_container .nav_bar li {
+      font-size: 1.3rem; }
+  .landing_title {
+    left: 5rem;
+    top: 1rem; }
+    .landing_title .page_title {
+      font-size: 2.5rem; }
+    .landing_title h5 {
+      font-size: 1.5rem; }
+  .side_draw {
+    left: 12rem;
+    bottom: 12rem;
+    width: 40vw;
+    height: 90vh;
+    transform: rotate(-90deg); }
+    .side_draw .side_container img {
+      width: 10rem;
+      height: 10rem;
+      display: none; }
+    .side_draw .side_container .fall_love {
+      width: 10rem;
+      height: 10rem; }
+    .side_draw .side_container .graduation {
+      top: 7rem;
+      right: 5rem; }
+    .side_draw .side_container .wedding {
+      top: -10rem;
+      width: 10rem;
+      height: 10rem;
+      left: -2rem; }
+    .side_draw .side_container .grandma {
+      top: -8rem;
+      right: 16rem; }
+    .side_draw .side_container .family_3 {
+      top: -17rem; }
+    .side_draw .side_container .scrumboard {
+      bottom: 18rem;
+      left: 0rem; }
+  .your_path {
+    height: 108vh; }
+    .your_path .yourpath_container {
+      margin-bottom: -1rem;
+      font-size: 1rem; }
+      .your_path .yourpath_container .path_container {
+        font-size: 1.3rem; }
+        .your_path .yourpath_container .path_container img {
+          width: 13rem;
+          height: 13rem; }
+        .your_path .yourpath_container .path_container .growing_up, .your_path .yourpath_container .path_container .presentation_pic, .your_path .yourpath_container .path_container .team_idea {
+          visibility: hidden; }
+  .our_commitment .our_services_pics {
+    right: 21rem; }
+    .our_commitment .our_services_pics img {
+      width: 15rem;
+      height: 15rem;
+      display: none; }
+    .our_commitment .our_services_pics .team_meeting_2 {
+      top: 13rem;
+      left: 28rem; }
+    .our_commitment .our_services_pics .analyze_two {
+      top: 12rem;
+      left: -4rem; }
+    .our_commitment .our_services_pics .analyze_one {
+      bottom: 25rem;
+      left: 20rem; }
+    .our_commitment .our_services_pics .analyze_three {
+      top: 6rem;
+      right: 7rem; }
+  .our_commitment .our_commitment_container .commitment_words {
+    left: 18rem;
+    bottom: 51rem;
+    font-size: 1.5rem; }
+  .our_services {
+    margin-bottom: 45rem;
+    height: 80vh;
+    place-items: normal; }
+    .our_services h1 {
+      margin-bottom: 1rem;
+      text-align: center; }
+  .service_container {
+    width: 100vw;
+    height: 50vh;
+    place-items: normal; }
+    .service_container .servie_grid {
+      padding: 2rem; }
+  .the_team {
+    width: 100%;
+    height: 95vh; }
+    .the_team p {
+      margin: 2rem; }
+    .the_team .team_container .card {
+      width: 30vh;
+      height: 48vh; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          right: 1rem;
+          zoom: 70%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          right: 1rem;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          right: 0rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          right: 5rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          right: 0rem;
+          zoom: 62%; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          zoom: 62%;
+          right: 0rem;
+          bottom: 4rem;
+          opacity: 1; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          right: 5rem;
+          bottom: 6rem;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 0rem;
+          bottom: 3rem;
+          zoom: 65%; }
+  footer {
+    height: 70vh;
+    overflow: hidden; }
+    footer .subscription {
+      height: 12vh; } }
 
-    .subscription{
-        font-size: 2rem;
-        width: 100vw;
-        height: 15vh;
-        margin-top: 4rem;
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .landing_background {
+    width: 100vw;
+    height: 100vh; } }
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  * {
+    box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+  .landing_background {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden; }
+  header .logo .lighthouse_logo {
+    width: 5rem;
+    height: 5rem;
+    left: .5rem; }
+  header .logo p {
+    position: relative;
+    left: 6rem;
+    bottom: 5rem;
+    font-size: 2rem; }
+  header .header_container {
+    left: -9rem;
+    top: 5rem; }
+    header .header_container .nav_bar li {
+      font-size: 1.2rem; }
+    header .header_container .nav_bar .teamNav, header .header_container .nav_bar .pathNav {
+      display: none; }
+  .landing_title {
+    left: 1rem;
+    top: 1rem; }
+    .landing_title .page_title {
+      font-size: 1.5rem; }
+    .landing_title h5 {
+      font-size: 1rem; }
+  .side_draw {
+    left: 12rem;
+    bottom: 15rem;
+    width: 50%;
+    height: 100vh;
+    transform: rotate(-90deg); }
+    .side_draw .side_container img {
+      width: 5rem;
+      height: 5rem;
+      display: none; }
+    .side_draw .side_container .fall_love {
+      width: 7rem;
+      height: 7rem;
+      right: 0rem;
+      top: -1rem;
+      transform: rotate(90deg); }
+    .side_draw .side_container .graduation {
+      top: -8rem;
+      right: -5rem;
+      transform: rotate(90deg); }
+    .side_draw .side_container .wedding {
+      top: -18rem;
+      width: 8rem;
+      height: 8rem;
+      left: -4rem;
+      transform: rotate(90deg); }
+    .side_draw .side_container .grandma {
+      top: -37rem;
+      right: 12rem; }
+    .side_draw .side_container .family_3 {
+      top: -33rem;
+      left: -2rem;
+      width: 9rem;
+      height: 9rem;
+      transform: rotate(90deg); }
+    .side_draw .side_container .scrumboard {
+      bottom: 25rem;
+      left: 5rem;
+      transform: rotate(90deg); }
+  .your_path {
+    height: 150vh;
+    text-align: center; }
+    .your_path .path_title {
+      font-size: 2rem; }
+    .your_path .yourpath_container {
+      margin-bottom: 1rem;
+      font-size: 1rem; }
+      .your_path .yourpath_container .path_container {
+        font-size: 1rem;
+        margin: 0rem 2rem -2rem 2rem;
+        grid-template-columns: repeat 1, 1fr;
+        grid-template-rows: repeat 3, 1fr;
+        grid-gap: 2rem; }
+        .your_path .yourpath_container .path_container h1 {
+          font-size: 1.5rem;
+          margin-bottom: -2rem; }
+        .your_path .yourpath_container .path_container .your_life {
+          width: 20rem;
+          height: 20rem;
+          grid-row: 1 / span 1; }
+        .your_path .yourpath_container .path_container .your_team {
+          width: 20rem;
+          height: 20rem;
+          grid-row: 2 / span 1; }
+        .your_path .yourpath_container .path_container .your_goal {
+          width: 20rem;
+          height: 20vh;
+          grid-row: 3 / span 1; }
+        .your_path .yourpath_container .path_container img {
+          width: 7rem;
+          height: 7rem; }
+        .your_path .yourpath_container .path_container .growing_up, .your_path .yourpath_container .path_container .presentation_pic, .your_path .yourpath_container .path_container .team_idea {
+          visibility: hidden; }
+  .our_commitment {
+    height: 40%; }
+    .our_commitment .our_services_pics {
+      border: none;
+      bottom: 20rem;
+      right: 4.5rem; }
+      .our_commitment .our_services_pics img {
+        width: 7rem;
+        height: 7rem; }
+      .our_commitment .our_services_pics .team_meeting_2, .our_commitment .our_services_pics .analyze_two, .our_commitment .our_services_pics .analyze_one, .our_commitment .our_services_pics .analyze_three {
+        opacity: 0; }
+    .our_commitment .our_commitment_container {
+      padding: 5rem 0rem 2rem 0rem; }
+      .our_commitment .our_commitment_container .commitment_words {
+        left: 0rem;
+        bottom: 42rem;
+        font-size: 1rem;
+        width: 20rem;
         text-align: center;
-
-        input[type=email]{
-            margin-left: 2rem;
-            width: 30%;
-            padding: 1rem 2rem;
-            border: white;
-            box-shadow: -10px 5px 30px #ACACAC;
-            outline: none;
-        }
-
-        .emailSubmission {font-size: 1rem}
-
-        input[type=submit] {
-            background-color: $backgroundFive;
-            color: white;
-            font-size: 1rem;
-            padding: .89rem 2rem;
-            text-decoration: none;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .emailShort {display: none}
-    }
-
-
-
-    .contact_container{
-        width: 100vw;
-        height: 10%;
-        border-top: 1px solid #DCDCDC;
-
-        .contact{
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            position: relative;
-            left: 35%;
-
-            li {
-            margin-right: 3.5rem;
-            margin-top: 2rem;
-
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-
-            .social_media{
-                height: 1.2rem;
-                width: 1.2rem;
-            }
-        }
-    }
-}
-
-@import 'media'
+        font-size: 1rem;
+        font-weight: 900;
+        display: none; }
+        .our_commitment .our_commitment_container .commitment_words h1 {
+          font-size: 1.3rem;
+          margin-bottom: -.5rem; }
+  .our_services {
+    margin-bottom: -20rem;
+    place-items: normal; }
+    .our_services h1 {
+      font-size: 1.5rem;
+      margin-bottom: -25rem;
+      place-items: center center;
+      text-align: center; }
+    .our_services p {
+      display: none; }
+    .our_services .service_container {
+      width: 100vw;
+      height: 50vh;
+      padding: 0rem 0rem 0rem 2rem;
+      margin-top: -12rem; }
+      .our_services .service_container h1 {
+        font-size: 1rem; }
+      .our_services .service_container .service_grid {
+        padding: 0rem 0rem 8rem 0rem; }
+        .our_services .service_container .service_grid h1 {
+          padding-left: .5rem; }
+      .our_services .service_container .service_one, .our_services .service_container .service_two, .our_services .service_container .service_three, .our_services .service_container .service_four, .our_services .service_container .service_five, .our_services .service_container .service_six {
+        width: 20vw;
+        height: 10vh;
+        border: none; }
+      .our_services .service_container div:nth-of-type(n):hover {
+        background: white;
+        color: black; }
+  .the_team {
+    width: 100vw;
+    height: 105vh; }
+    .the_team h1 {
+      font-size: 2rem; }
+    .the_team p {
+      font-size: 1rem; }
+    .the_team .team_container .card {
+      width: 70vw;
+      height: 48vh; }
+      .the_team .team_container .card .card_img {
+        height: 30vh;
+        overflow: hidden;
+        margin-bottom: 2rem; }
+        .the_team .team_container .card .card_img .business_card_1 {
+          right: 1rem;
+          zoom: 70%; }
+        .the_team .team_container .card .card_img .business_card_2 {
+          right: 1rem;
+          zoom: 55%; }
+        .the_team .team_container .card .card_img .business_card_3 {
+          right: 1rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_4 {
+          right: 9rem;
+          zoom: 40%; }
+        .the_team .team_container .card .card_img .business_card_5 {
+          right: 2rem;
+          zoom: 60%; }
+        .the_team .team_container .card .card_img .business_card_6 {
+          zoom: 55%;
+          right: 1rem;
+          bottom: 4rem;
+          opacity: 1; }
+        .the_team .team_container .card .card_img .business_card_7 {
+          right: 5rem;
+          bottom: 6rem;
+          zoom: 65%; }
+        .the_team .team_container .card .card_img .business_card_8 {
+          position: relative;
+          right: 2.5rem;
+          bottom: 3rem;
+          zoom: 55%; }
+  footer {
+    height: 70vh;
+    overflow: hidden; }
+    footer .subscription {
+      height: 12vh;
+      font-size: 1.5rem; }
+      footer .subscription input[type=email] {
+        box-shadow: -1px 1px 10px #ACACAC; }
+    footer .contact_container .contactTop {
+      display: none; }
+    footer .contact_container .contact {
+      left: 15%; }
+      footer .contact_container .contact li {
+        margin-right: 1.5rem; }
+      footer .contact_container .contact .social_media {
+        height: 1.2rem;
+        width: 1.2rem; } }
